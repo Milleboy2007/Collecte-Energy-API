@@ -1,0 +1,22 @@
+### ------------------- Building---------------------------------------
+
+### Create
+POST http://localhost:3000/api/buildings/create
+Content-Type: application/json
+
+{
+    "name": "Pavillon principal",
+    "address": "7000, rue Marie-Victorin",
+    "yearBuilt": 2005
+}
+
+### Get all
+Get http://localhost:3000/api/buildings
+
+### Search by id
+Get http://localhost:3000/api/buildings/2
+
+### ------------------- Health---------------------------------------
+
+### Health check
+Get http://localhost:3000/api/health

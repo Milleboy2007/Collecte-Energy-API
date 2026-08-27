@@ -1,8 +1,12 @@
 
 export default class CreateBuildingDto{
-    //exclamation temporaire, attante de DB
-    name!: string;
-    address!: string;
-    yearBuilt!: number;
+    name: string;
+    address: string;
+    yearBuilt: number;
 
+    constructor(name: string, address: string, yearBuit: number){
+        this.name = name,
+        this.address = address,
+        this.yearBuilt = yearBuit
+    }
 }
