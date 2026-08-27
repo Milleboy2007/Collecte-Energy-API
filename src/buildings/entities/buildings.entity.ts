@@ -1,5 +1,5 @@
 
-export default class Buildings{
+export default class Building{
     //exclamation temporaire, attante de DB
     id!: number;
     name!: string;
