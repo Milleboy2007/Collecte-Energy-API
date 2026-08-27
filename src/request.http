@@ -1,7 +1,7 @@
 ### ------------------- Building---------------------------------------
 
 ### Create
-POST http://localhost:3000/api/buildings/create
+POST http://localhost:3000/api/v1/buildings/create
 Content-Type: application/json
 
 {
@@ -11,12 +11,12 @@ Content-Type: application/json
 }
 
 ### Get all
-Get http://localhost:3000/api/buildings
+Get http://localhost:3000/api/v1/buildings
 
 ### Search by id
-Get http://localhost:3000/api/buildings/2
+Get http://localhost:3000/api/v1/buildings/4
 
 ### ------------------- Health---------------------------------------
 
 ### Health check
-Get http://localhost:3000/api/health
+Get http://localhost:3000/api/v1/health

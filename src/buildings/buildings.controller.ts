@@ -2,7 +2,10 @@ import { Body, Controller, Get, Param, ParseIntPipe, Post } from '@nestjs/common
 import { BuildingsService } from './buildings.service';
 import CreateBuildingDto from './dto/create-building.dto';
 
-@Controller('buildings')
+@Controller({
+    path: 'buildings',
+    version: '1'
+})
 export class BuildingsController {
     constructor(
         private buildingService: BuildingsService
