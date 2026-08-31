@@ -22,7 +22,7 @@ export class BuildingsController {
     }
 
     @Get('/:id')
-    FoundById(@Param('id', ParseIntPipe) id:number){
+    FoundById(@Param('id') id:string){
         return this.buildingService.FoundById(id);
     }
 }
