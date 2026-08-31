@@ -10,8 +10,8 @@ export class BuildingsService {
         return this.Buildings;
     }
 
-    CreateNewBuilding(name: string, address: string, yearBuilt: number){
-        const newBuilding = new Building(name, address, yearBuilt)
+    CreateNewBuilding(code: string, name: string, address: string, yearBuilt: number){
+        const newBuilding = new Building(code, name, address, yearBuilt)
         this.Buildings.push(newBuilding);
         return newBuilding;
     }

@@ -18,7 +18,7 @@ export class BuildingsController {
 
     @Post('/create')
     CreateNewBuilding(@Body() body:CreateBuildingDto){
-        return this.buildingService.CreateNewBuilding(body.name, body.address, body.yearBuilt);
+        return this.buildingService.CreateNewBuilding(body.code, body.name, body.address, body.yearBuilt);
     }
 
     @Get('/:id')
