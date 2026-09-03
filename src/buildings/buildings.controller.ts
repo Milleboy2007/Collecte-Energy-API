@@ -3,7 +3,7 @@ import { BuildingsService } from './buildings.service';
 import CreateBuildingDto from './dto/create-building.dto';
 import { ApiBadRequestResponse, ApiCreatedResponse, ApiOperation, ApiParam, ApiTags } from '@nestjs/swagger';
 import { ResponseBuildingDto } from './dto/response-building.dto';
-import { ProblemDetailsDto } from './dto/probleme-details.dto';
+import { ProblemDetailsDto } from '../probleme-details.dto';
 
 @ApiTags('Buildings')
 @ApiBadRequestResponse({
