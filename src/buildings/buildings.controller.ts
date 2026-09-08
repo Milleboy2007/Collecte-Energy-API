@@ -7,16 +7,16 @@ import { ProblemDetailsDto } from '../probleme-details.dto';
 
 @ApiTags('Buildings')
 @ApiBadRequestResponse({
-      description: 'Données invalides.',
-      type: ProblemDetailsDto,
-    })
+    description: 'Données invalides.',
+    type: ProblemDetailsDto,
+})
 @Controller({
     path: 'buildings',
     version: '1'
 })
 export class BuildingsController {
     constructor(
-        private buildingService: BuildingsService
+        private readonly buildingService: BuildingsService
     ){}
 
     @ApiOperation({
