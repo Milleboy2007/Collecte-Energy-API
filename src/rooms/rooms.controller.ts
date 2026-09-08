@@ -17,8 +17,8 @@ export class RoomsController {
 
   
   @ApiOperation({
-      summary: "",
-      description: ""
+      summary: "Creation d'un local",
+      description: "Creation d'un local dans la collection courante."
   })
   @ApiCreatedResponse({
     description: 'Room créé.',
@@ -35,10 +35,10 @@ export class RoomsController {
     return this.roomsService.create(createRoomDto);
   }
 
-  
+
   @ApiOperation({
-      summary: "",
-      description: ""
+      summary: "Recuperation de tout les locals",
+      description: "Recuperation de tout les locals enregistrer dans la collection courante."
   })
   @Get()
   findAll() {
@@ -47,12 +47,12 @@ export class RoomsController {
 
 
   @ApiOperation({
-      summary: "",
-      description: ""
+      summary: "Recuperation d'un local",
+      description: "Recuperation d'un local precis dans la collection courante."
   })
   @ApiParam({
     name: "id",
-    description: "",
+    description: "Code d'identification unique du local.",
     format: "uuid"
   })
   @Get(':id')
@@ -62,12 +62,12 @@ export class RoomsController {
 
 
   @ApiOperation({
-      summary: "",
-      description: ""
+      summary: "Modification d'un local",
+      description: "Modification des information d'un local de la collection courante."
   })
   @ApiParam({
     name: "id",
-    description: "",
+    description: "Code d'identification unique du local.",
     format: "uuid"
   })
   @Patch(':id')
@@ -77,12 +77,12 @@ export class RoomsController {
 
 
   @ApiOperation({
-      summary: "",
-      description: ""
+      summary: "Suppresion d'un local",
+      description: "Suppresion definitive d'un local de la collection courante."
   })
   @ApiParam({
     name: "id",
-    description: "",
+    description: "Code d'identification unique d'un local.",
     format: "uuid"
   })
   @Delete(':id')

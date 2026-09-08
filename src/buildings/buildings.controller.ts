@@ -20,8 +20,8 @@ export class BuildingsController {
     ){}
 
     @ApiOperation({
-        summary: "",
-        description: ""
+        summary: "Recuperer tout les batiments",
+        description: "Recupere tout les batiments qui se trouve dans la collection courante."
     })
     @Get()
     GetAllBuilding(){
@@ -50,8 +50,8 @@ export class BuildingsController {
 
     
     @ApiOperation({
-        summary: "",
-        description: ""
+        summary: "Recupere un batiment",
+        description: "Recupere un batiment precis de la collection courante."
     })
     @ApiParam({
       name: 'id',

@@ -4,7 +4,7 @@ import { ApiProperty } from "@nestjs/swagger";
     @ApiProperty({format: "uuid"})
     id!: string;
 
-    @ApiProperty({example: ""})
+    @ApiProperty({example: "S-013"})
     code!: string;
 
     @ApiProperty({format: "uuid"})
