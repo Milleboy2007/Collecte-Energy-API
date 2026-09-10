@@ -7,21 +7,21 @@ import { ProblemDetailsDto } from '../probleme-details.dto';
 
 @ApiTags('Buildings')
 @ApiBadRequestResponse({
-      description: 'Données invalides.',
-      type: ProblemDetailsDto,
-    })
+    description: 'Données invalides.',
+    type: ProblemDetailsDto,
+})
 @Controller({
     path: 'buildings',
     version: '1'
 })
 export class BuildingsController {
     constructor(
-        private buildingService: BuildingsService
+        private readonly buildingService: BuildingsService
     ){}
 
     @ApiOperation({
-        summary: "",
-        description: ""
+        summary: "Recuperer tout les batiments",
+        description: "Recupere tout les batiments qui se trouve dans la collection courante."
     })
     @Get()
     GetAllBuilding(){
@@ -50,8 +50,8 @@ export class BuildingsController {
 
     
     @ApiOperation({
-        summary: "",
-        description: ""
+        summary: "Recupere un batiment",
+        description: "Recupere un batiment precis de la collection courante."
     })
     @ApiParam({
       name: 'id',
