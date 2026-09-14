@@ -24,7 +24,7 @@ export class BuildingsController {
         description: "Recupere tout les batiments qui se trouve dans la collection courante."
     })
     @Get()
-    GetAllBuilding(){
+    async GetAllBuilding(){
         return this.buildingService.GetAllBuilding();
     }
 
