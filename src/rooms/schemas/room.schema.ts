@@ -1,22 +1,22 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 @Schema({ timestamps: true })
 export class Room extends Document {
     @Prop({ required: true, unique: true })
-    code: string;
+    code!: string;
+
+    @Prop({ type: Types.ObjectId, ref: 'Buildings', required: true })
+    buildingId!: string;
 
     @Prop({ required: true })
-    buildingId: string;
+    floor!: number;
 
     @Prop({ required: true })
-    floor: number;
+    type!: string;
 
     @Prop({ required: true })
-    type: string;
-
-    @Prop({ required: true })
-    capacity: number;
+    capacity!: number;
 
     @Prop({ default: null })
     createdAt?: Date;
