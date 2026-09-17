@@ -1,4 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger";
+import { IsNotEmpty, IsNumber, IsOptional, IsString } from "class-validator";
 
 export class CreateRoomDto {
     @ApiProperty({
@@ -6,26 +7,33 @@ export class CreateRoomDto {
         example: "S-013",
         maxLength: 0
     })
-    code: string;
+    @IsString()
+    @IsNotEmpty()
+    code!: string;
 
     @ApiProperty({
         description: "Code d'identification du batiment du local",
         format: "uuid",
     })
-    buildingId: string;
+    @IsString()
+    @IsNotEmpty()
+    buildingId!: string;
 
     @ApiProperty({
         description: "Numero d'etage du local",
         example: 0,
         minimum: 0
     })
-    floor: number;
+    @IsNumber()
+    floor!: number;
 
     @ApiProperty({
         description: "Type du local",
         example: "Informatique",
         maxLength: 100
     })
+    @IsString()
+    @IsOptional()
     type?: string;
 
     @ApiProperty({
@@ -33,13 +41,15 @@ export class CreateRoomDto {
         example: 30,
         minimum: 0
     })
+    @IsNumber()
+    @IsOptional()
     capacity?: number;
 
-    constructor(code: string, buildingId: string, floor: number, type: string, capacity: number){
-        this.code = code;
-        this.buildingId = buildingId;
-        this.floor = floor;
-        type ?? this.type;
-        capacity ?? this.capacity;
-    }
+    // constructor(code: string, buildingId: string, floor: number, type: string, capacity: number){
+    //     this.code = code;
+    //     this.buildingId = buildingId;
+    //     this.floor = floor;
+    //     type ?? this.type;
+    //     capacity ?? this.capacity;
+    // }
 }

@@ -8,6 +8,8 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
 
+  //app.useGlobalPipes
+
   app.enableVersioning({
     type: VersioningType.URI,
     defaultVersion: '1',
