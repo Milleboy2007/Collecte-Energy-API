@@ -13,6 +13,7 @@ import databaseConfig from 'config/database.config';
         // 1. Gestion des configurations avec validation stricte
         ConfigModule.forRoot({
           isGlobal: true,
+          envFilePath: `.env.${process.env.NODE_ENV || 'development'}`,
           load: [databaseConfig], // Charge notre fichier de config
           validationSchema: Joi.object({
             // Si MONGO_URI est absent, NestJS plantera immédiatement avec un message clair
